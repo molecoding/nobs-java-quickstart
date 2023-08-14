@@ -1,0 +1,37 @@
+<archetype-descriptor name="nobs-java-quickstart" partial="false">
+  <requiredProperties>
+    <requiredProperty key="javaVersion" >
+    <defaultValue>17</defaultValue>
+      <validationRegex>11|17</validationRegex>
+  </requiredProperty>
+</requiredProperties>
+  <fileSets>
+    <!-- filtered: the selected files will be used as -->
+    <!-- packaged: the selected files will be generated/copied in a directory structure that is prepended by the package property -->
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/test/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" packaged="false" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.gitignore</include>
+        <include>.editorconfig</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
