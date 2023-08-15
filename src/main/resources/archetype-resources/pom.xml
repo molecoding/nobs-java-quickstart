@@ -4,13 +4,14 @@
 
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
-  <version>${version}</version>
+  <version>#[[${revision}]]#</version>
   <packaging>jar</packaging>
 
   <name>${artifactId}</name>
   <url>https://nobs.molecoding.com</url>
 
   <properties>
+    <revision>${version}</revision>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -168,7 +169,7 @@
     <profile>
       <id>17</id>
       <activation>
-        <activeByDefault>#if(${javaVersion} == 17)true#{else}false#end</activeByDefault>
+        <activeByDefault>#if(${javaVersion} == 17 || (${javaVersion} != 8 && ${javaVersion} != 11))true#{else}false#end</activeByDefault>
       </activation>
       <properties>
         <maven.compiler.release>17</maven.compiler.release>
@@ -181,6 +182,15 @@
       </activation>
       <properties>
         <maven.compiler.release>11</maven.compiler.release>
+      </properties>
+    </profile>
+    <profile>
+      <id>8</id>
+      <activation>
+        <activeByDefault>#if(${javaVersion} == 8)true#{else}false#end</activeByDefault>
+      </activation>
+      <properties>
+        <maven.compiler.release>8</maven.compiler.release>
       </properties>
     </profile>
   </profiles>

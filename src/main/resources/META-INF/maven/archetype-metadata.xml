@@ -1,10 +1,10 @@
 <archetype-descriptor name="nobs-java-quickstart" partial="false">
   <requiredProperties>
-    <requiredProperty key="javaVersion" >
-    <defaultValue>17</defaultValue>
-      <validationRegex>11|17</validationRegex>
-  </requiredProperty>
-</requiredProperties>
+    <requiredProperty key="javaVersion">
+      <defaultValue>17</defaultValue>
+      <validationRegex>(8|11|17)</validationRegex>
+    </requiredProperty>
+  </requiredProperties>
   <fileSets>
     <!-- filtered: the selected files will be used as -->
     <!-- packaged: the selected files will be generated/copied in a directory structure that is prepended by the package property -->
@@ -20,6 +20,7 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
+    <!-- dotfiles -->
     <fileSet filtered="false" packaged="false" encoding="UTF-8">
       <directory></directory>
       <includes>
@@ -31,6 +32,15 @@
       <directory></directory>
       <includes>
         <include>README.md</include>
+      </includes>
+    </fileSet>
+    <!-- mvnw -->
+    <fileSet filtered="false" packaged="false" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>mvnw</include>
+        <include>mvnw.cmd</include>
+        <include>.mvn/**</include>
       </includes>
     </fileSet>
   </fileSets>

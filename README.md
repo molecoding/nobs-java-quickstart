@@ -12,12 +12,12 @@ Create new project using this archetype.
 
 ```shell
 mvn archetype:generate \
-  -DgroupId=me.jerryshang.playground \
-  -DartifactId=blah \
-  -DarchetypeGroupId=com.molecoding.nobs \
-  -DarchetypeArtifactId=nobs-java-quickstart \
-  -DarchetypeVersion=1.0-SNAPSHOT \
   -DinteractiveMode=false \
   -DarchetypeCatalog=local \
+  -DarchetypeGroupId=com.molecoding.nobs \
+  -DarchetypeArtifactId=nobs-java-quickstart \
+  -DarchetypeVersion=9999-SNAPSHOT \
+  -DgroupId=me.jerryshang.playground \
+  -DartifactId=owsome-project \
   -DjavaVersion=11
 ```

@@ -4,12 +4,16 @@
 
   <groupId>com.molecoding.nobs</groupId>
   <artifactId>nobs-java-quickstart</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${revision}</version>
   <packaging>maven-archetype</packaging>
 
   <name>Archetype - nobs-java-quickstart</name>
   <url>https://nobs.molecoding.com</url>
 
+  <properties>
+    <revision>9999-SNAPSHOT</revision>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <build>
     <plugins>
