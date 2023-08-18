@@ -49,7 +49,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.10.0-M1</version>
+      <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -105,6 +105,36 @@
           </filters>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.9</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <configuration>
+          <properties>
+            <property>
+              <name>revision</name>
+            </property>
+          </properties>
+        </configuration>
+      </plugin>
     </plugins>
     <pluginManagement>
       <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -150,16 +180,26 @@
         <!-- https://maven.apache.org/plugins/maven-site-plugin/ -->
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
-          <version>4.0.0-M8</version>
+          <version>4.0.0-M9</version>
         </plugin>
         <!-- https://maven.apache.org/plugins/maven-project-info-reports-plugin/ -->
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.4.5</version>
         </plugin>
+        <!-- others -->
         <plugin>
           <artifactId>maven-shade-plugin</artifactId>
           <version>3.5.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>2.16.0</version>
         </plugin>
       </plugins>
     </pluginManagement>

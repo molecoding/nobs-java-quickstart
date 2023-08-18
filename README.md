@@ -18,6 +18,15 @@ mvn archetype:generate \
   -DarchetypeArtifactId=nobs-java-quickstart \
   -DarchetypeVersion=9999-SNAPSHOT \
   -DgroupId=me.jerryshang.playground \
-  -DartifactId=owsome-project \
+  -DartifactId=awsome-project \
   -DjavaVersion=11
+```
+
+## Update
+
+In created project with this archetype, do check the versions and write back here.
+
+```shell
+mvn versions:display-dependency-updates
+mvn versions:display-plugin-updates
 ```
