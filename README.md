@@ -17,8 +17,8 @@ mvn archetype:generate \
   -DarchetypeGroupId=com.molecoding.nobs \
   -DarchetypeArtifactId=nobs-java-quickstart \
   -DarchetypeVersion=9999-SNAPSHOT \
-  -DgroupId=me.jerryshang.playground \
-  -DartifactId=awsome-project \
+  -DgroupId=com.molecoding.nobs \
+  -DartifactId=awesome-project \
   -DjavaVersion=11
 ```
 
@@ -30,3 +30,8 @@ In created project with this archetype, do check the versions and write back her
 mvn versions:display-dependency-updates
 mvn versions:display-plugin-updates
 ```
+
+## Todo
+
+- [ ] spotless
+- [ ] another libs like guava, jackson
