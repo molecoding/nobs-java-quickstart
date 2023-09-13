@@ -3,7 +3,7 @@
 ## Build and install local
 
 ```shell
-./mvn install
+./mvnw install
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ mvn archetype:generate \
 
 ## Update
 
-In created project with this archetype, do check the versions and write back here.
+After created project with this archetype, do check if there are new versions for the dependencies and feed back to this project.
 
 ```shell
 mvn versions:display-dependency-updates
@@ -34,4 +34,4 @@ mvn versions:display-plugin-updates
 ## Todo
 
 - [ ] spotless
-- [ ] another libs like guava, jackson
+- [ ] utility libs like jackson?
